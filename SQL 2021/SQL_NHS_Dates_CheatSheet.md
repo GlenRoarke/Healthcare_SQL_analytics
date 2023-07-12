@@ -28,7 +28,7 @@ To generate weekending date
 	 
 To convert DateTIme to Date
 ```sql 
-	convert(date,pat_created,103) 
+convert(date,pat_created,103) 
 ```
  
 To display date as small date time
@@ -38,25 +38,25 @@ convert(smalldatetime,[epd_created],103) as EPISODE_START_DATE
  
 To display date weekly date through Excel SQL connection
 ```sql
-	convert(smalldatetime,dateadd(week,datediff(week,0,b.APPT_DTTM),0),103)
+convert(smalldatetime,dateadd(week,datediff(week,0,b.APPT_DTTM),0),103)
 ```
 
 To display date monthly date through Excel SQL connection.
 Note- smalldatetime must be used instead of date for correct formatting
 ```sql
-	convert(smalldatetime,dateadd(month,datediff(month,0,b.APPT_DTTM),0),103) 
+,convert(smalldatetime,dateadd(month,datediff(month,0,b.APPT_DTTM),0),103) 
 ```	
 
 ```sql
 
 --To convert a varchar yyyy-mm-dd hh:mm:si value to a smalldatetime time (2005)
-	convert(smalldatetime,start_date,20) 
+,convert(smalldatetime,start_date,20) 
 	
 --yyyy-mm-dd to month in medway CDS
-	,convert(date,dateadd(month,datediff(month,0,convert(date,[CDS_ACTIVITY_DATE], 126)),0),103)  [CDS_Activity_Month]
+,convert(date,dateadd(month,datediff(month,0,convert(date,[CDS_ACTIVITY_DATE], 126)),0),103)  [CDS_Activity_Month]
 	
 --yyyymmddhhmmss to datetime
-	convert(datetime,STUFF(STUFF(STUFF(STUFF(DateApplied,5,0,'-'),8,0,'-'),11,0,' '),14,0,':'),20) [DateApplied]
+,convert(datetime,STUFF(STUFF(STUFF(STUFF(DateApplied,5,0,'-'),8,0,'-'),11,0,' '),14,0,':'),20) [DateApplied]
 ```	
 	
 	
@@ -66,19 +66,18 @@ Age at Episode start date
 
 -- Different types of age
 --	Pasted from <https://stackoverflow.com/questions/1572110/how-to-calculate-age-in-years-based-on-date-of-birth-and-getdate>
-	DECLARE @dob  datetime
+DECLARE @dob  datetime
 SET @dob='1992-01-09 00:00:00'
-	SELECT DATEDIFF(hour,@dob,GETDATE())/8766.0 AS AgeYearsDecimal
-    ,CONVERT(int,ROUND(DATEDIFF(hour,@dob,GETDATE())/8766.0,0)) AS AgeYearsIntRound
-    ,DATEDIFF(hour,@dob,GETDATE())/8766 AS AgeYearsIntTrunc
+SELECT DATEDIFF(hour,@dob,GETDATE())/8766.0 AS AgeYearsDecimal
+,CONVERT(int,ROUND(DATEDIFF(hour,@dob,GETDATE())/8766.0,0)) AS AgeYearsIntRound
+,DATEDIFF(hour,@dob,GETDATE())/8766 AS AgeYearsIntTrunc
 
-	--Age at admission
-	,CASE
-	WHEN DATEADD(YY,DATEDIFF(YY,P.[BIRTH_DTTM],IPS.[ADMIT_DTTM]),P.[BIRTH_DTTM]) > IPS.[ADMIT_DTTM] 
-	THEN DATEDIFF(YY,P.[BIRTH_DTTM],IPS.[ADMIT_DTTM]) - 1
-		ELSE DATEDIFF(YY,P.[BIRTH_DTTM],IPS.[ADMIT_DTTM])
-			 END AS 'Age At Admission'
-	
+--Age at admission
+,CASE
+WHEN DATEADD(YY,DATEDIFF(YY,P.[BIRTH_DTTM],IPS.[ADMIT_DTTM]),P.[BIRTH_DTTM]) > IPS.[ADMIT_DTTM] 
+THEN DATEDIFF(YY,P.[BIRTH_DTTM],IPS.[ADMIT_DTTM]) - 1
+ELSE DATEDIFF(YY,P.[BIRTH_DTTM],IPS.[ADMIT_DTTM])
+END AS 'Age At Admission'	
 ```	
 
 ## Common Month/Year end dates
@@ -90,7 +89,7 @@ These can be very useful when added the WHERE clauses.
 Select cast(DATEADD(year,DATEDIFF(month,'20180401',getdate())/12,'20180401') as smalldatetime) [Financial_Year_Start]
 
 --Brings back the last three months of data rolling
-	>= DATEADD(MONTH, -3, GETDATE())
+WHERE >= DATEADD(MONTH, -3, GETDATE())
 	
 --First day of previous month
 select DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE())-1, 0)
