@@ -1,0 +1,34 @@
+USE CDS_OP
+
+CREATE NONCLUSTERED INDEX IX_Import_id ON extracts ([Import_id]);
+CREATE NONCLUSTERED INDEX IX_MostRecent_Flag ON extracts ([MostRecent_Flag]);
+CREATE NONCLUSTERED INDEX IX_CDSUniqueIdentifier ON extracts ([CDSUniqueIdentifier]);
+CREATE NONCLUSTERED INDEX IX_CDSExtractDate ON extracts ([CDSExtractDate]);
+CREATE NONCLUSTERED INDEX IX_CDSExtractTime ON extracts ([CDSExtractTime]);
+CREATE NONCLUSTERED INDEX IX_CDSReportPeriodStartDate ON extracts ([CDSReportPeriodStartDate]);
+CREATE NONCLUSTERED INDEX IX_CDSReportPeriodEndDate ON extracts ([CDSReportPeriodEndDate]);
+CREATE NONCLUSTERED INDEX IX_CDSActivityDate ON extracts ([CDSActivityDate]);
+CREATE NONCLUSTERED INDEX IX_LocalPatientIdentifier ON extracts ([LocalPatientIdentifier]);
+CREATE NONCLUSTERED INDEX IX_NHSNumber ON extracts ([NHSNumber]);
+CREATE NONCLUSTERED INDEX IX_NHSNumberStatusIndicatorCode ON extracts ([NHSNumberStatusIndicatorCode]);
+CREATE NONCLUSTERED INDEX IX_PostcodeOfUsualAddress ON extracts ([PostcodeOfUsualAddress]);
+CREATE NONCLUSTERED INDEX IX_OrganisationCode_ResidenceResponsibility ON extracts ([OrganisationCode_ResidenceResponsibility]);
+CREATE NONCLUSTERED INDEX IX_PersonBirthDate ON extracts ([PersonBirthDate]);
+CREATE NONCLUSTERED INDEX IX_EthnicCategory ON extracts ([EthnicCategory]);
+CREATE NONCLUSTERED INDEX IX_ConsultantCode ON extracts ([ConsultantCode]);
+CREATE NONCLUSTERED INDEX IX_CareProfessionalMainSpecialtyCode ON extracts ([CareProfessionalMainSpecialtyCode]);
+CREATE NONCLUSTERED INDEX IX_ActivityTreatmentFunctionCode ON extracts ([ActivityTreatmentFunctionCode]);
+CREATE NONCLUSTERED INDEX IX_PrimaryDiagnosis_ICD ON extracts ([PrimaryDiagnosis_ICD]);
+CREATE NONCLUSTERED INDEX IX_AttendanceIdentifier ON extracts ([AttendanceIdentifier]);
+CREATE NONCLUSTERED INDEX IX_AttendanceStatus ON extracts ([AttendanceStatus]);
+CREATE NONCLUSTERED INDEX IX_FirstAttendanceCode ON extracts ([FirstAttendanceCode]);
+CREATE NONCLUSTERED INDEX IX_AppointmentDate ON extracts ([AppointmentDate]);
+CREATE NONCLUSTERED INDEX IX_AppointmentTime ON extracts ([AppointmentTime]);
+CREATE NONCLUSTERED INDEX IX_OrganisationCode_CodeOfCommissioner ON extracts ([OrganisationCode_CodeOfCommissioner]);
+CREATE NONCLUSTERED INDEX IX_PrimaryProcedure_OPCS ON extracts ([PrimaryProcedure_OPCS]);
+CREATE NONCLUSTERED INDEX IX_SiteCodeOfTreatment ON extracts ([SiteCodeOfTreatment]);
+CREATE NONCLUSTERED INDEX IX_GeneralMedicalPractitioner_Specified ON extracts ([GeneralMedicalPractitioner_Specified]);
+CREATE NONCLUSTERED INDEX IX_GeneralPractice_PatientRegistration ON extracts ([GeneralPractice_PatientRegistration]);
+CREATE NONCLUSTERED INDEX IX_SourceOfReferralForOut_Patients ON extracts ([SourceOfReferralForOut_Patients]);
+CREATE NONCLUSTERED INDEX IX_ReferrerCode ON extracts ([ReferrerCode]);
+CREATE NONCLUSTERED INDEX IX_ReferringOrganisationCode ON extracts ([ReferringOrganisationCode]);

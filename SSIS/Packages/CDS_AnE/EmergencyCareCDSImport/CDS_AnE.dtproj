@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProductVersion>10.50.1600.1</ProductVersion>
+  <SchemaVersion>9.0.1.0</SchemaVersion>
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+  <Database>
+    <Name>EmergencyCareCDSImport.database</Name>
+    <FullPath>EmergencyCareCDSImport.database</FullPath>
+  </Database>
+  <Cubes />
+  <Dimensions />
+  <DataSources>
+    <ProjectItem>
+      <Name>Glen Test.ds</Name>
+      <FullPath>Glen Test.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews />
+  <MiningModels />
+  <Roles />
+  <Miscellaneous>
+    <ProjectItem>
+      <Name>CreateAuditTable.sql</Name>
+      <FullPath>CreateAuditTable.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AuditTableInsert&amp;Update.sql</Name>
+      <FullPath>AuditTableInsert&amp;Update.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>CDS_AnE_ColumnMapping.xlsx</Name>
+      <FullPath>CDS_AnE_ColumnMapping.xlsx</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AnE_Audit and Errorlog_CreateTable.sql</Name>
+      <FullPath>AnE_Audit and Errorlog_CreateTable.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AnE_AuditTable_Update_Queries.sql</Name>
+      <FullPath>AnE_AuditTable_Update_Queries.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AnE_CreateSASU.sql</Name>
+      <FullPath>AnE_CreateSASU.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AnE_CreateExtract.sql</Name>
+      <FullPath>AnE_CreateExtract.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AnE_CreateStaging.sql</Name>
+      <FullPath>AnE_CreateStaging.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AnE_CreateIndex.sql</Name>
+      <FullPath>AnE_CreateIndex.sql</FullPath>
+    </ProjectItem>
+  </Miscellaneous>
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Glen Test</Id>
+            <Name>Glen Test</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI10.1;Data Source=SVVCORPDB01;Integrated Security=SSPI;Initial Catalog=GlenTest</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Glen Test</Id>
+            <Name>Glen Test</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+        <DatabaseStorageLocations />
+      </Options>
+    </Configuration>
+  </Configurations>
+  <DTSPackages>
+    <DtsPackage FormatVersion="3">
+      <Name>CDS_AnE_V62.dtsx</Name>
+      <FullPath>CDS_AnE_V62.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+  </DTSPackages>
+</Project>

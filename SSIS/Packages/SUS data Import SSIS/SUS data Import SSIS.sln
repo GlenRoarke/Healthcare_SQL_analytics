@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{D183A3D8-5FD8-494B-B014-37F57B35E655}") = "SUS data Import SSIS", "SUS data Import SSIS\SUS data Import SSIS.dtproj", "{943D49E7-F6C8-447D-AC4C-EE9A32487673}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{943D49E7-F6C8-447D-AC4C-EE9A32487673}.Development|Default.ActiveCfg = Development
+		{943D49E7-F6C8-447D-AC4C-EE9A32487673}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

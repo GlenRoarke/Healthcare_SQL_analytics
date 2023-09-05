@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{D183A3D8-5FD8-494B-B014-37F57B35E655}") = "IpCodingSnapshot", "IpCodingSnapshot\IpCodingSnapshot.dtproj", "{E5C6E390-0928-473F-9C2F-625D13F4EC0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5C6E390-0928-473F-9C2F-625D13F4EC0E}.Development|Default.ActiveCfg = Development
+		{E5C6E390-0928-473F-9C2F-625D13F4EC0E}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
