@@ -17,6 +17,6 @@ There is a strong data quality focus here to improve the commission data set (CD
 There are examples of SSIS ETL  packages for large NHS datasets such as the inpatient CDS.
 
 'DailyMissingInfoReport- Auto Email Large list' is an automated package I created to loop through an email a distribution list and send out operational reports.
-It is possible to update the email disribution lists by SQL stored procedures in the source database.
+It was possible to update the email disribution lists by SQL stored procedures in the source database.
 
 
